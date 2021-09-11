@@ -11,8 +11,13 @@ const Box = () => {
     const ChangeBg=(data)=>{
       console.log(inpData[data]);
       console.log(inpData.length);
-        inpData[data].innerHTML=`box ${data}`;
+      inpData[data].innerHTML=`box ${data}`;
+      inpData[data].style.color="red";
+      count+=1;
+      if(count>2){
+        inpData[data-2].innerHTML='';
         inpData[data].style.color="red";
+      }
     }
     return (
         <div className='container-fluid box'>
